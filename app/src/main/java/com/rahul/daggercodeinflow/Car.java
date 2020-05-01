@@ -6,13 +6,19 @@ import javax.inject.Inject;
 
 public class Car {
     private static final String TAG = "Car";
+
+    @Inject
     Wheel wheel;
     Engine engine;
 
     @Inject
-    public Car(Wheel wheel, Engine engine) {
-        this.wheel = wheel;
+    public Car(Engine engine) {
         this.engine = engine;
+    }
+
+    @Inject
+    public void enableRemote(Remote remote) {
+        remote.setListener(this);
     }
 
     public void drive() {
