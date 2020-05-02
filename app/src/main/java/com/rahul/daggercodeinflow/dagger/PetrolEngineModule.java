@@ -1,8 +1,10 @@
-package com.rahul.daggercodeinflow;
+package com.rahul.daggercodeinflow.dagger;
+
+import com.rahul.daggercodeinflow.car.Engine;
+import com.rahul.daggercodeinflow.car.PetrolEngine;
 
 import dagger.Binds;
 import dagger.Module;
-import dagger.Provides;
 
 @Module
 public abstract class PetrolEngineModule {

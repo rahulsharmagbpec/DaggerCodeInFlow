@@ -1,4 +1,4 @@
-package com.rahul.daggercodeinflow;
+package com.rahul.daggercodeinflow.car;
 
 import javax.inject.Inject;
 

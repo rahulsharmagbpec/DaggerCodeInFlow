@@ -1,4 +1,4 @@
-package com.rahul.daggercodeinflow;
+package com.rahul.daggercodeinflow.car;
 
 /*
  *suppose wheels class is external library, and we cannot edit this

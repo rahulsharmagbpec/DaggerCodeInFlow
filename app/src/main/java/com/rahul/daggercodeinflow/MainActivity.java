@@ -3,7 +3,10 @@ package com.rahul.daggercodeinflow;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
+
+import com.rahul.daggercodeinflow.car.Car;
+import com.rahul.daggercodeinflow.dagger.CarComponent;
+import com.rahul.daggercodeinflow.dagger.DaggerCarComponent;
 
 import javax.inject.Inject;
 

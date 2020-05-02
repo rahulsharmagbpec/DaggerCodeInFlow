@@ -1,4 +1,7 @@
-package com.rahul.daggercodeinflow;
+package com.rahul.daggercodeinflow.dagger;
+
+import com.rahul.daggercodeinflow.MainActivity;
+import com.rahul.daggercodeinflow.car.Car;
 
 import dagger.Component;
 

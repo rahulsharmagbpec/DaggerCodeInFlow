@@ -1,4 +1,7 @@
-package com.rahul.daggercodeinflow;
+package com.rahul.daggercodeinflow.dagger;
+
+import com.rahul.daggercodeinflow.car.DieselEngine;
+import com.rahul.daggercodeinflow.car.Engine;
 
 import dagger.Binds;
 import dagger.Module;
