@@ -2,7 +2,7 @@ package com.rahul.daggercodeinflow;
 
 import dagger.Component;
 
-@Component(modules = WheelModule.class)
+@Component(modules = {WheelModule.class, PetrolEngineModule.class})
 public interface CarComponent {
 
     Car getCar();

@@ -41,3 +41,16 @@
             return new Wheels(rims, tyres);
         }
     }
+5. Now if dependency have to inject into Interface
+    because interface doesn't have constructor.
+
+    interface Engine{
+        void start();
+    }
+    class PetrolEngin extend Engine{
+    void start(){
+        Log.e(TAG, "started");
+    }}
+
+    @Component(modules = {WheelModule.class, PetrolEngineModule.class})
+    class CarComponent
