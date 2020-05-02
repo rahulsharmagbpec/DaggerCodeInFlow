@@ -8,7 +8,7 @@ public class Car {
     private static final String TAG = "Car";
 
     @Inject
-    Wheel wheel;
+    Wheels wheel;
     Engine engine;
 
     @Inject

@@ -18,3 +18,26 @@
 
 3. Method injection (less commonly used, some people never used)
     Dagger first call : Constructor Injection -->> Field Injection -->> Method Injection
+
+4. Modules and Provides (tell to dagger how to create new object)
+    suppose if we cannot edit Wheels class because of library or something else then how to inject dependency
+
+    @Module
+    public class WheelModule {
+        @Provides
+        static Rims provideRims() {
+            return new Rims();
+        }
+
+        @Provides
+        static Tyres provideTyres() {
+            Tyres tyres = new Tyres();
+            tyres.inflate();
+            return tyres;
+        }
+
+        @Provides
+        static Wheels provideWheels(Rims rims, Tyres tyres) {
+            return new Wheels(rims, tyres);
+        }
+    }
