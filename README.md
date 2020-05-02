@@ -54,3 +54,22 @@
 
     @Component(modules = {WheelModule.class, PetrolEngineModule.class})
     class CarComponent
+
+6. Inject values at runtime.
+
+    CarComponent carComponent = DaggerCarComponent.builder().dieselEngineModule(new DieselEngineModule(1)).build();
+
+    @Module
+    public class DieselEngineModule {
+
+        private int horsePower;
+
+        public DieselEngineModule(int horsePower){
+            this.horsePower = horsePower;
+        }
+
+        @Provides
+        Engine provideEngine(){
+            return new DieselEngine(horsePower);
+        }
+    }

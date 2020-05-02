@@ -5,7 +5,7 @@ import com.rahul.daggercodeinflow.car.Car;
 
 import dagger.Component;
 
-@Component(modules = {WheelModule.class, PetrolEngineModule.class})
+@Component(modules = {WheelModule.class, DieselEngineModule.class})
 public interface CarComponent {
 
     Car getCar();

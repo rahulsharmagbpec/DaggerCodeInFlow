@@ -5,12 +5,28 @@ import com.rahul.daggercodeinflow.car.Engine;
 
 import dagger.Binds;
 import dagger.Module;
+import dagger.Provides;
 
 @Module
-public abstract class DieselEngineModule {
+public class DieselEngineModule {
+
+    private int horsePower;
+
+    public DieselEngineModule(int horsePower){
+        this.horsePower = horsePower;
+    }
+
+    @Provides
+    Engine provideEngine(){
+        return new DieselEngine(horsePower);
+    }
+
+    /*
+
+    below
 
     @Binds
-    abstract Engine bindEngine(DieselEngine engine);
+    abstract Engine bindEngine(DieselEngine engine);*/
 
     /*
     we have to write engine1, 2, 3 .... redundant so will optimize it using bind
